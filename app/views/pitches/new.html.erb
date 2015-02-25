@@ -1,0 +1,52 @@
+<h1>New Pitch</h1>
+<h3>Band of Angels invests in companies currently located in Central and Northern California. If you are outside of our geographic focus, please visit the Angel Capital Associationto identify angel groups in your region.</h3>
+<%= form_for :pitch, url: articles_path do |f| %>
+  <p>
+    <%= f.label :Company_Name %><br>
+    <%= f.text_field :Company_Name %>
+  </p>
+
+  <p>
+    <%= f.label :Address %><br>
+    <%= f.text_area :Address %>
+  </p>
+
+  <p>
+    <%= f.label :City %><br>
+    <%= f.text_field :City %>
+  </p>
+
+  <p>
+    <%= f.label :State %><br>
+    <%= f.text_field :State %>
+  </p>
+
+  <p>
+    <%= f.label :Zip %><br>
+    <%= f.text_field :zip %>
+  </p>
+
+  <p>
+    <%= f.label :Contact_Person %><br>
+    <%= f.text_field :Contact_Person %>
+  </p>
+
+  <p>
+    <%= f.label :Contact_Phone %><br>
+    <%= f.text_field :Contact_Phone %>
+  </p>
+
+  <p>
+    <%= f.label :Contact_Email %><br>
+    <%= f.text_field :Contact_Email %>
+  </p>
+
+  <p>
+    <%= f.label :Pitch %><br>
+    <%= f.text_area :Pitch %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
