@@ -3,6 +3,11 @@ class PitchesController < ApplicationController
   end
 
   def create
-    render plain: params[:pitch].inspect
+    @pitch = Pitch.new(params[:pitch])
+
+    @pitch.save
+    redirect_to @pitch
   end
+
+
 end
