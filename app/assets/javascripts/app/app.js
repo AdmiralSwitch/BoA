@@ -1,1 +1,1 @@
-var app = angular.module("raffler", ["rails"]);
+var app = angular.module("boa", ["rails"]);

@@ -1,20 +1,38 @@
 
 
-<h1>Southpark Raffle</h1>
+<h1>Raffle</h1>
 
 <div ng-controller="RaffleController">
 
   <form ng-submit="addPlayer()">
-    <input type="text" ng-model="newName">
+    <input class="textfld" type="text" ng-model="newName">
     <input type="submit" value="Add">
   </form>
 
   <ul>
     <li ng-repeat="player in players">
       {{player.name}}
-       <span ng-show="player.winner" ng-class="{highlight: player == lastWinner}" class="winner">WINNER</span>
     </li>
   </ul>
 
    <button ng-click="drawWinner()">Draw Winner</button>
+
+</div>
+
+<h1>Pitches</h1>
+<div ng-controller="PitchCtrl">
+  <form ng-submit="addPitch()">
+    <div class="col-md-3 col-md-offset-1">
+      <input type="text" class="textfld" placeholder="Company" ng-model="newCompany">
+    </div>
+    <div class="col-md-3 col-md-offset-2">
+      <input type="text" class="textfld" placeholder="Idea" ng-model="newIdea">
+    </div>
+    <input type="submit" value="Add">
+  </form>
+   <ul>
+     <li ng-repeat="pitch in pitches">
+       {{pitch.idea}} by {{pitch.company}}
+     </li>
+   </ul>
 </div>
