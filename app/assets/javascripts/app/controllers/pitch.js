@@ -4,16 +4,18 @@ app.controller('PitchCtrl', [
   function($scope, Pitch) {
 
     Pitch.query().then(function(result) {
-      $scope.pitchs = result;
+      $scope.pitches = result;
     });
 
     $scope.addPitch = function() {
       var newPitch = new Pitch({
-        name: $scope.newName
+        company: $scope.newCompany,
+        idea: $scope.newIdea
       });
       newPitch.create().then(function(newlyCreatedPitch){
         $scope.pitchs.push(newlyCreatedPitch);
-        $scope.newName = "";
+        $scope.newCompany = "";
+        $scope.newIdea = "";
       });
     };
   }]

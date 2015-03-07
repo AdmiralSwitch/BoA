@@ -1,15 +1,15 @@
 // A place for all my factories
 
 // A factory that wraps the rails resource, compliments to railsResourceFactory service.
-// The returned resource is available under the name 'Player'. Examples: 
-// 
+// The returned resource is available under the name 'Player'. Examples:
+//
 // Player.query({ name: "Cartman"})
-// 
+//
 // var newPlayer = new Player({ name: "Jack"})
 // newPlayer.create()
-// 
+//
 // newPlayer.delete()
-// 
+//
 // newPlayer.name = "Eric Cartman"
 // newPlayer.update()
 //
@@ -23,3 +23,10 @@ app.factory('Player',
 		return resource;
 });
 
+app.factory('Pitch',
+  function (railsResourceFactory) {
+    var resource = railsResourceFactory({
+      url: '/pitches',
+      name: 'pitch'});
+    return resource;
+});
