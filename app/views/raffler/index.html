@@ -1,3 +1,10 @@
+<header class="site show-nav" style="display: block;">
+  <nav class="main-menu">
+    <div class="top-bar cf" style="full: #FFFFFF; color: #FFFFFF; border-color: #FFFFFF;"></div>
+    <div class="logo">Place Logo Here</div>
+    <div class="menu-button"></div>
+  </nav>
+</header>
 <!--
 
 <h1>Raffle</h1>
@@ -14,22 +21,26 @@
       {{player.name}}
     </li>
   </ul>
-</div>
- -->
-<h1>Pitches</h1>
-<div ng-controller="PitchCtrl">
-  <form ng-submit="addPitch()">
-    <div class="col-md-3 col-md-offset-1">
-      <input type="text" class="textfld" placeholder="Company" ng-model="newCompany">
-    </div>
-    <div class="col-md-3 col-md-offset-2">
-      <input type="text" class="textfld" placeholder="Idea" ng-model="newIdea">
-    </div>
-    <input type="submit" value="Add">
-  </form>
-   <ul>
-     <li ng-repeat="pitch in pitches">
-       {{pitch.idea}} by {{pitch.company}}
-     </li>
-   </ul>
+</div> -->
+Got an idea to pitch us? Check the box below
+Checked: <input ng-hide="checked" type="checkbox" ng-checked="checked" ng-model="truth">
+
+<div ng-show="truth" class="">
+  <h1>Pitches</h1>
+  <div ng-controller="PitchCtrl">
+    <form ng-submit="addPitch()">
+      <div class="col-md-3 col-md-offset-1">
+        <input type="text" class="textfld" placeholder="Company" ng-model="newCompany">
+      </div>
+      <div class="col-md-3 col-md-offset-2">
+        <input type="text" class="textfld" placeholder="Idea" ng-model="newIdea">
+      </div>
+      <input type="submit" value="Add">
+    </form>
+     <ul>
+       <li ng-repeat="pitch in pitches">
+         {{pitch.idea}} by {{pitch.company}}
+       </li>
+     </ul>
+  </div>
 </div>

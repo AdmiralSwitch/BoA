@@ -17,7 +17,13 @@ a {
   height: 0;
   overflow: hidden;
 }
+#site show-nav {
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 
+}
 #container {
   width: 600px;
   margin: 0 auto;
