@@ -1,7 +1,19 @@
+<!-- Header bar -->
 <div class="header-bar">
   <h1>Swich Thomas</h1>
 </div>
 
+<!-- Buttons -->
+<div class="container">
+  <div class="nav nav-group-justified" ng-init="tab = 1">
+    <ul class="nav nav-pills red">
+      <li ng-class="{ active:tab === 1}"> <a href ng-click="tab = 1">About Us.</a></li>
+      <li ng-class="{ active:tab === 2}"> <a href ng-click="tab = 2">What we do.</a></li>
+      <li ng-class="{ active:tab === 3}"> <a href ng-click="tab = 3">Testimonials</a></li>
+      <li ng-class="{ active:tab === 4}"> <a href ng-click="tab = 4">Resume</a></li>
+    </ul>
+  </div>
+</div>
 <!--
 
 <h1>Raffle</h1>
@@ -25,20 +37,19 @@
   <source src="../assets/images/wave.mov" type="video/mov">
 </video> -->
 
-<div class="bg">
-  <img src="/assets/images/flower.jpg" alt="">
-</div>
-
 <div class="content">
-  <h3>Who we are<input ng-hide="checked" type="checkbox" ng-checked="checked" ng-model="whom"></h3>
-  <div class="who" ng-show="whom">
+
+
+  <div class="who" ng-show="tab === 1">
+  <br>
+  <h3>Who we are</h3>
     The Band of Angels is Silicon Valley's oldest seed funding organization. We are a formal group of 150 former and current high tech executives who are interested in investing their time and money into new, cutting edge, startup companies. We've seeded over 277 companies in our history with 55 profitable M&A exits and 10 Nasdaq IPOs. Band members have founded companies such as Symantec, Logitech, and National Semiconductor and been senior executives at the likes of Sun Microsystems, Hewlett Packard, and Intuit.
     The Band meets monthly to formally consider three startups selected from among the more than 50 that are screened each month by the Band Deal Selection Process. Entrepreneurs can expect a thorough examination and, occasionally, an investment from some of Silicon Valley's most accomplished entrepreneurs.
   </div>
   <br>
-  <h3>Submit your plan. <input ng-hide="checked" type="checkbox" ng-checked="checked" ng-model="submittrue"></h3>
-  <div class="submit-idea" ng-show="submittrue">
 
+  <div class="submit-idea" ng-show="tab === 2">
+    <h3>Submit your plan.</h3>
   There are many great programs that teach entrepreneurs how to be successful in raising venture capital – but Angels are not VCs and the same rules and expectations simply don’t apply. The odds of raising angel financing are higher than raising venture capital, and in some instances it may be all the financing you need.
   <br>
   <h4>Deal Criteria Statement</h4>
