@@ -21,6 +21,24 @@ html, body {
   color: white;
 }
 
+//MENU BUTTON IN THE HEADER
+.menu-button {
+  float: right;
+  font-family: "Onramp";
+  padding: 10px 0 0;
+  font-size: 26px;
+  line-height: 20px;
+  cursor: pointer;
+  letter-spacing: .2em;
+}
+.menu-icon {
+  cursor: pointer;
+  margin: 0 auto;
+  position: relative;
+  width: 24px;
+  height: 16px;
+  display: inline-block;
+}
 .content {
   padding-top: 75px;
   width: 100%;
