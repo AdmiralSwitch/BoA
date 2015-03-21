@@ -34,13 +34,3 @@ app.controller('RaffleController', [
 
 	}]
 );
-
-app.controller('panalController', function(){
-	this.tab = 2;
-	this.selectTab = function(setTab){
-		this.tab = setTab;
-	};
-	this.isSelected = function(checkTab){
-		return this.tab === checkTab;
-	};
-});

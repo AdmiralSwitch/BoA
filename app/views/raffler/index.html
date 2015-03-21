@@ -5,29 +5,22 @@
 
 <!-- Buttons -->
 <div class="container">
-  <div class="nav nav-group-justified" ng-controller="panalController as panal">
+  <div class="nav nav-group-justified" ng-init="tab = 1">
     <ul class="nav nav-pills red">
-      <li ng-class="{ active:panal.isSelected(1)}"> <a href ng-click="panel.selectTab(1)">About Us</a></li>
-      <li ng-class="{ active:panal.isSelected(2)}"> <a href ng-click="panel.selectTab(2)">What we do</a></li>
-      <li ng-class="{ active:panal.isSelected(3)}"> <a href ng-click="panel.selectTab(3)">Testimonials</a></li>
-      <li ng-class="{ active:panal.isSelected(4)}"> <a href ng-click="panel.selectTab(4)">Resume</a></li>
+      <li > <a href ng-click="tab = 1">About Us</a></li>
+      <li> <a href ng-click="tab = 2">What we do</a></li>
+      <li> <a href ng-click="tab = 3">Testimonials</a></li>
+      <li> <a href ng-click="tab = 4">Resume</a></li>
     </ul>
   </div>
 </div>
 
-<!-- Video TEST -->
-<div id ="bg">
-  <video autoplay loop poster="54.183.64.164/raw-media/first-frame-screencap" id="video-background" muted>
-    <source src="http://beta.mattgrossdesign.com/sites/default/files/wood%20autumn-HD.mp4" type="video/mp4">
-  </video>
-  <!-- <video id="bg" src="waves.mp4" autoplay="true" loop="true" muted="true">
-  </video> -->
-</div>
-
-<div class="content" ng-controller="panalController as panal" >
 
 
-  <div class="who" ng-show="panal.isSelected(1)">
+<div class="content">
+
+
+  <div class="who" ng-show="tab === 1">
   <br>
   <h3>Who we are</h3>
     The Band of Angels is Silicon Valley's oldest seed funding organization. We are a formal group of 150 former and current high tech executives who are interested in investing their time and money into new, cutting edge, startup companies. We've seeded over 277 companies in our history with 55 profitable M&A exits and 10 Nasdaq IPOs. Band members have founded companies such as Symantec, Logitech, and National Semiconductor and been senior executives at the likes of Sun Microsystems, Hewlett Packard, and Intuit.
@@ -35,7 +28,7 @@
   </div>
   <br>
 
-  <div class="submit-idea" ng-show="panal.isSelected(2)">
+  <div class="submit-idea" ng-show="tab === 2">
     <h3>Submit your plan.</h3>
   There are many great programs that teach entrepreneurs how to be successful in raising venture capital – but Angels are not VCs and the same rules and expectations simply don’t apply. The odds of raising angel financing are higher than raising venture capital, and in some instances it may be all the financing you need.
   <br>
@@ -63,6 +56,7 @@
     <br>
     Got an idea to pitch us? Check the box below: <input ng-hide="checked" type="checkbox" ng-checked="checked" ng-model="truth">
 
+  <!-- PITCH ENTRY AND DISPLAY -->
     <div ng-show="truth" class="">
       <h1>Pitches</h1>
       <div ng-controller="PitchCtrl">
@@ -82,5 +76,17 @@
          </ul>
       </div>
     </div>
+
   </div>
+</div>
+
+
+
+<!-- Video TEST -->
+<div id ="bg">
+  <video autoplay loop poster="54.183.64.164/raw-media/first-frame-screencap" id="video-background" muted>
+    <source src="http://beta.mattgrossdesign.com/sites/default/files/wood%20autumn-HD.mp4" type="video/mp4">
+  </video>
+  <!-- <video id="bg" src="waves.mp4" autoplay="true" loop="true" muted="true">
+  </video> -->
 </div>
