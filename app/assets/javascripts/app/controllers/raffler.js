@@ -1,4 +1,4 @@
-app.controller('RaffleController', [ 
+app.controller('RaffleController', [
 	"$scope",
 	"Player",
 	function($scope, Player) {
@@ -6,7 +6,7 @@ app.controller('RaffleController', [
 		Player.query().then(function(result) {
 			$scope.players = result;
 		})
-		
+
 		$scope.addPlayer = function() {
 			var newPlayer = new Player({
 				name: $scope.newName
@@ -34,3 +34,13 @@ app.controller('RaffleController', [
 
 	}]
 );
+
+app.controller('panalController', function(){
+	this.tab = 1;
+	this.selectTab = function(setTab){
+		this.tab = setTab;
+	};
+	this.isSelected = function(checkTab){
+		return this.tab === checkTab;
+	};
+});
