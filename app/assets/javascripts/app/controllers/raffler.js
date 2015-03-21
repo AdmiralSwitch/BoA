@@ -36,7 +36,7 @@ app.controller('RaffleController', [
 );
 
 app.controller('panalController', function(){
-	this.tab = 1;
+	this.tab = 2;
 	this.selectTab = function(setTab){
 		this.tab = setTab;
 	};
