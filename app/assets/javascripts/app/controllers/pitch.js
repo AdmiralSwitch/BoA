@@ -10,13 +10,15 @@ app.controller('PitchCtrl', [
     $scope.addPitch = function() {
       var newPitch = new Pitch({
         company: $scope.newCompany,
-        idea: $scope.newIdea
+        idea: $scope.newIdea,
       });
       newPitch.create().then(function(newlyCreatedPitch){
-        $scope.pitchs.push(newlyCreatedPitch);
+        $scope.pitches.push(newlyCreatedPitch);
         $scope.newCompany = "";
         $scope.newIdea = "";
       });
     };
   }]
 );
+
+app.controller(p)

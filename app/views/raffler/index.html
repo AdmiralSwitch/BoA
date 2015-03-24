@@ -61,19 +61,21 @@
       <h1>Pitches</h1>
       <div ng-controller="PitchCtrl">
         <form ng-submit="addPitch()">
-          <div class="col-md-3 col-md-offset-1">
+          <div class="col-md-5 col-md-offset-1">
             <input type="text" class="textfld" placeholder="Company" ng-model="newCompany">
           </div>
-          <div class="col-md-3 col-md-offset-2">
+          <div>
             <input type="text" class="textfld" placeholder="Idea" ng-model="newIdea">
           </div>
-          <input type="submit" value="Add">
+          <input type="submit" value="Submit">
         </form>
          <ul>
            <li ng-repeat="pitch in pitches">
-             {{pitch.idea}} by {{pitch.company}}
+             {{pitch.idea}} by: {{pitch.company}}
            </li>
-         </ul>
+           <li> {{newIdea}} by: {{newCompany}}</li>
+          </ul>
+
       </div>
     </div>
 
@@ -84,8 +86,10 @@
 
 <!-- Video TEST -->
 <div id ="bg">
-  <video autoplay loop poster="54.183.64.164/raw-media/first-frame-screencap" id="video-background" muted>
-    <source src="http://beta.mattgrossdesign.com/sites/default/files/wood%20autumn-HD.mp4" type="video/mp4">
+  <video autoplay loop cover id="video-background" muted>
+    <source src="waves.mp4" type="video/mp4">
+
+    <!-- <source src="http://beta.mattgrossdesign.com/sites/default/files/wood%20autumn-HD.mp4" type="video/mp4"> -->
   </video>
   <!-- <video id="bg" src="waves.mp4" autoplay="true" loop="true" muted="true">
   </video> -->
