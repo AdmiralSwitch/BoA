@@ -34,11 +34,3 @@ app.controller('RaffleController', [
 
 	}]
 );
-
-//RESUME TAB directive
-app.directive('resume', function(){
-	return {
-		restrict: 'E',
-		templateURL: 'tabs/resume.html'
-	};
-});
