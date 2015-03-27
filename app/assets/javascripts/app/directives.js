@@ -2,6 +2,6 @@
 app.directive("resume", function(){
   return {
     restrict: "E",
-    templateURL: "./views/raffler/tabs/resume.html"
+    template: "./app/views/raffler/tabs/resume.html"
   };
 });
