@@ -1,9 +1,9 @@
 //HERE IS YOUR FONT CSS
 html, body {
-  // background-image: image-url('flower.jpg');
-  // background-position: fixed;
-  // background-size: contain;
-  // background-repeat: no-repeat;
+  background-image: image-url('flower.jpg');
+  background-position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 18px;
 
@@ -21,6 +21,7 @@ html, body {
   z-index: 25
 }
 .header-bar h1{
+  top: -10px;
   font-family: 'Lobster', cursive;
   text-shadow: 2px 2px 5px rgba(0,0,0,.5);
   color: white;
@@ -54,7 +55,6 @@ html, body {
 
 //PAGE CONTENT
 .content {
-
   color: white;
   padding-left: 10px;
   padding-right: 10px;
@@ -72,6 +72,10 @@ html, body {
 
 .content h4 {
   color: white;
+}
+
+.resume {
+  background-color: rgba(0, 0, 0, .25);
 }
 
 
